@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script defer src="assets/js/app.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <h1>Add Product</h1>  
+  <form id="productForm">
+    <label>product name:</label>
+    <input id="productName" type="text" required>
+    <br>
+    <label>product price:</label>
+    <input id="productPrice" type="number" required>
+    <br>
+    <label>product type:</label>
+    <select id="productType" required>
+      <option disabled selected value="">please choose type</option>
+      <option value="drinks">drinks</option>
+      <option value="meat">meat</option>
+      <option value="dairy">dairy</option>
+      <option value="snacks">snacks</option>
+      <option value="basics">basics</option>
+    </select>
+    <br>
+    <label for="productImage">Image URL:</label>
+    <input type="text" id="productImage" required>
+    <br>
+    <button type="submit">add product</button>
+  </form>
 
-    <title>Document</title>
-  </head>
-  <body></body>
+  <h2>My Cart</h2>
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Image</th>
+        <th>Actions</th> 
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</body>
 </html>
